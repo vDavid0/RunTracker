@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<model type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="20086" systemVersion="21G83" minimumToolsVersion="Automatic" sourceLanguage="Swift" userDefinedModelVersionIdentifier="">
+    <entity name="Coordinates" representedClassName="Coordinates" syncable="YES" codeGenerationType="class">
+        <attribute name="latitudes" optional="YES" attributeType="Transformable" customClassName="[Double]"/>
+        <attribute name="longitudes" optional="YES" attributeType="Transformable" customClassName="[Double]"/>
+        <relationship name="training" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="Training" inverseName="coordinates" inverseEntity="Training"/>
+    </entity>
+    <entity name="Training" representedClassName="Training" syncable="YES" codeGenerationType="class">
+        <attribute name="altitudeDifference" optional="YES" attributeType="Double" defaultValueString="0.0" usesScalarValueType="YES"/>
+        <attribute name="distance" optional="YES" attributeType="Double" defaultValueString="0.0" usesScalarValueType="YES"/>
+        <attribute name="endDate" optional="YES" attributeType="Date" usesScalarValueType="NO"/>
+        <attribute name="maxSpeed" optional="YES" attributeType="Double" defaultValueString="0.0" usesScalarValueType="YES"/>
+        <attribute name="startDate" optional="YES" attributeType="Date" usesScalarValueType="NO"/>
+        <attribute name="steps" optional="YES" attributeType="Integer 64" defaultValueString="0" usesScalarValueType="YES"/>
+        <relationship name="coordinates" optional="YES" maxCount="1" deletionRule="Cascade" destinationEntity="Coordinates" inverseName="training" inverseEntity="Coordinates"/>
+    </entity>
+    <elements>
+        <element name="Training" positionX="-63" positionY="-18" width="128" height="148"/>
+        <element name="Coordinates" positionX="180.5357666015625" positionY="11.0557861328125" width="128" height="88"/>
+    </elements>
+</model>
